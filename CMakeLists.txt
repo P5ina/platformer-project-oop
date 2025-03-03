@@ -3,7 +3,16 @@ project(platformer)
 
 set(CMAKE_CXX_STANDARD 17)
 
-find_package(raylib CONFIG REQUIRED)
+include(FetchContent)
+
+FetchContent_Declare(
+        raylib
+        DOWNLOAD_EXTRACT_TIMESTAMP OFF
+        URL https://github.com/raysan5/raylib/archive/refs/tags/5.5.tar.gz
+)
+
+FetchContent_MakeAvailable(raylib)
+
 if(APPLE)
     set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address")
 elseif(UNIX)
