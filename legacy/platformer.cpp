@@ -1,12 +1,12 @@
-#include "raylib.h"
+#include "../cmake-build-debug/_deps/raylib-src/src/raylib.h"
 
 #include "globals.h"
 #include "level.h"
-#include "player.h"
+#include "../player.h"
 #include "enemy.h"
 #include "graphics.h"
 #include "assets.h"
-#include "utilities.h"
+#include "../utilities.h"
 
 void update_game() {
     game_frame++;
