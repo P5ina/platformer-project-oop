@@ -4,12 +4,19 @@
 
 #ifndef RENDERING_H
 #define RENDERING_H
+
 #include <flecs.h>
 
 namespace Rendering {
+
+    constexpr int WINDOW_WIDTH = 1280;
+    constexpr int WINDOW_HEIGHT = 800;
+
     struct OnPreDraw { };
+    struct OnPreDrawWorld { };
     struct OnLayerBackgroundDraw { };
-    struct OnLayer1Draw { };
+    struct OnLayerForegroundDraw { };
+    struct OnPostDrawWorld { };
     struct OnLayerUIDraw { };
     struct OnPostDraw { };
 
