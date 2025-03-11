@@ -4,11 +4,14 @@
 
 #include "core.h"
 
+#include "input.h"
 #include "transform.h"
 
 namespace Core {
     CoreModule::CoreModule(flecs::world &ecs) {
         ecs.module<CoreModule>();
+
+        ecs.import<InputModule>();
 
         ecs.component<TransformComponent>();
     }

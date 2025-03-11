@@ -20,7 +20,7 @@ namespace Rendering {
     struct CameraModule {
         explicit CameraModule(flecs::world& ecs);
 
-        void cameraMovementSystem(Camera2DComponent& camera);
+        void Movement(Camera2DComponent& camera);
     };
 };
 

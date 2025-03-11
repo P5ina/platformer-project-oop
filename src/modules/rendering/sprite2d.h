@@ -20,7 +20,7 @@ namespace Rendering {
     struct SpriteRenderingModule {
         explicit SpriteRenderingModule(flecs::world& ecs);
 
-        static void renderSpritesSystem(Sprite2DComponent& sprite, Core::TransformComponent& transform);
+        static void Render(Sprite2DComponent& sprite, Core::TransformComponent& transform);
     };
 }
 

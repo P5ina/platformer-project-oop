@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.27)
 project(platformer)
 
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_SUPPRESS_DEVELOPER_WARNINGS TRUE)
 
 file(
         DOWNLOAD

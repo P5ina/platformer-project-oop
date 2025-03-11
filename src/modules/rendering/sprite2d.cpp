@@ -12,10 +12,10 @@ namespace Rendering {
 
         ecs.system<Sprite2DComponent, Core::TransformComponent>()
             .kind<OnLayerForegroundDraw>()
-            .each(renderSpritesSystem);
+            .each(Render);
     }
 
-    void SpriteRenderingModule::renderSpritesSystem(Sprite2DComponent &sprite, Core::TransformComponent &transform) {
+    void SpriteRenderingModule::Render(Sprite2DComponent &sprite, Core::TransformComponent &transform) {
         auto rect = sprite.dest;
         rect.x = transform.position.x;
         rect.y = transform.position.y;
